@@ -1,0 +1,23 @@
+---
+layout: project
+title: Projects
+---
+<section id="portfolio" class="portfolio">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Select Projects</h2>
+        <hr />
+        <div class="row">
+{% for project in site.projects %}
+          <div class="col-md-6">
+            <div class="portfolio-item">
+                <a href="{{ project.url }}"><h3>{{ project.title }}</h3><p class="lead">{{ project.subtitle }}</p>
+                  <img class="img-portfolio img-responsive" src="/img/{{ project.thumbnail }}">
+                </a>
+            </div>
+          </div>
+{% endfor %}
+        </div>
+      </div>
+    </div>
+</section>

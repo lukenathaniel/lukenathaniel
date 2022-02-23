@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+<body style="background-color:#333;color:#eee;">
+  {{ content }}
+  {% include footer-outside.html %}
+  {% include scripts.html %}
+  <script>
+    $("#requested").hide();
+    function onSubmitForm(event) {
+      // Allow for client validation to happen before the recaptcha
+      // Here we are just using HTML5 built-in form validation
+      grecaptcha.execute();
+
+      // Important to prevent the form from submitting on it's own
+      event.preventDefault();
+
+    }
+
+    function recaptchaOnSubmit(token) {
+      // Now submit the form
+      // Or instead of the line below, you can post the form using fetch or XHR.
+      document.getElementById('demoForm').submit();
+      $("#request").hide();
+      $("#requested").show();
+    }
+
+    document.getElementById('demoForm').addEventListener('submit', onSubmitForm);
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+
+</html>

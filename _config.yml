@@ -1,0 +1,32 @@
+# Site settings
+title:
+email:
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+
+# User setting
+owner:
+email:
+facebook_username:
+twitter_username:
+github_username:
+address:
+  - line: 1511 W Benton Street
+  - line: Iowa City, Iowa 52246
+  # Feel free to add more lines here
+telephone:
+copyright:
+
+# API settings
+google_api_key: AIzaSyDJUJQH3TaeGhHtMhj0kiS0vfI1FpqQJF4
+
+# Build settings
+markdown: kramdown
+
+collections:
+  projects:
+    output: true

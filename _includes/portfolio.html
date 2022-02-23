@@ -1,0 +1,19 @@
+<section id="portfolio" class="portfolio">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 text-center">
+        <h2>Selected Projects</h2>
+        <hr />
+        <div class="row">
+{% for project in site.projects %}
+          <div class="col-md-6">
+            <div class="portfolio-item">
+                <a href="{{ project.url }}"><img src="/img/{{ project.logofilename }}" /></h3><p>{{ project.subtitle }}</p>
+                  <img class="img-portfolio img-responsive" src="/img/{{ project.thumbnail }}">
+                </a>
+            </div>
+          </div>
+{% endfor %}
+        </div>
+      </div>
+    </div>
+</section>
